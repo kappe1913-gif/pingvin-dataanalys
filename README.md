@@ -7,13 +7,13 @@ Palmer Penguins-datasetet (CC0-licens), insamlat av Palmer Station LTER, Antarkt
 Källa: https://github.com/allisonhorst/palmerpenguins
 
 ## Vad skriptet gör
-`src/analyze.py` läser in datan och skapar:
+`src/analyse.py` läser in datan och skapar:
 - en statistisk sammanfattning i terminalen
-- ett stapeldiagram över medelvikt per art
-- ett spridningsdiagram över näbblängd vs vikt per art
+- ett stapeldiagram över medelvikt per art (`results/medelvikt_per_art.png`)
+- ett spridningsdiagram över näbblängd vs vikt per art (`results/naebb_vs_vikt.png`)
 
 ## Kör själv
-\`\`\`
+```
 pip install -r requirements.txt
-python src/analyze.py
-\`\`\`
+python src/analyse.py
+```
