@@ -24,3 +24,16 @@ plt.ylabel("Vikt (g)")
 plt.tight_layout()
 plt.savefig("results/medelvikt_per_art.png")
 print("\nDiagram sparat i results/medelvikt_per_art.png")
+
+
+# Scatterplot: näbblängd vs kroppsvikt, färgad efter art
+fig, ax = plt.subplots()
+for species, group in df.groupby("species"):
+    ax.scatter(group["bill_length_mm"], group["body_mass_g"], label=species)
+ax.set_xlabel("Näbblängd (mm)")
+ax.set_ylabel("Kroppsvikt (g)")
+ax.set_title("Näbblängd vs kroppsvikt per art")
+ax.legend()
+plt.tight_layout()
+plt.savefig("results/naebb_vs_vikt.png")
+print("Diagram sparat i results/naebb_vs_vikt.png")
